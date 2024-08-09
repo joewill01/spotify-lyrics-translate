@@ -1,0 +1,77 @@
+.TrackControls {
+    z-index: 5;
+    width: 100px;
+    margin-left: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.TrackControls__back-button {
+    display: block;
+    height: 16px;
+    width: 13px;
+    background-image: url('./BackButton.svg');
+    background-size: cover;
+    cursor: pointer;
+    transition: ease transform 0.2s, opacity 0.2s;
+    opacity: 0.5;
+}
+.TrackControls__back-button:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+.TrackControls__back-button:active {
+    transform: scale(1);
+    opacity: 0.6;
+}
+
+.TrackControls__play-button {
+    display: block;
+    height: 35px;
+    width: 35px;
+    background-size: cover;
+    cursor: pointer;
+    transition: ease transform 0.2s, opacity 0.2s;
+    opacity: .9;
+}
+.TrackControls__play-button:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+.TrackControls__play-button:active {
+    transform: scale(1);
+    opacity: 0.6;
+}
+
+.TrackControls__play-button--play {
+    background-image: url('./PlayButton.svg');
+}
+
+.TrackControls__play-button--pause {
+    background-image: url('./PauseButton.svg');
+}
+
+.TrackControls__play-button--stop {
+    background-image: url('./StopButton.svg');
+}
+
+.TrackControls__forward-button {
+    display: block;
+    height: 16px;
+    width: 13px;
+    background-image: url('./ForwardButton.svg');
+    background-size: cover;
+    cursor: pointer;
+    transition: ease transform 0.2s, opacity 0.2s;
+    opacity: 0.5;
+}
+.TrackControls__forward-button:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+.TrackControls__forward-button:active {
+    transform: scale(1);
+    opacity: 0.6;
+}

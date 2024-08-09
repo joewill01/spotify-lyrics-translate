@@ -1,0 +1,148 @@
+.Menu {
+
+}
+.Menu__button {
+    z-index: 99;
+    position: absolute;
+    top: 30px;
+    right: 40px;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    border-radius: 15px;
+    cursor: pointer;
+    transition: ease background-color 0.2s;
+}
+
+
+
+.Menu__button.active {
+
+    background-color: rgba(100,100,100,0.3);
+}
+
+.Menu__button:hover {
+
+    background-color: rgba(100,100,100,0.4);
+}
+
+.Menu__button__button-elements {
+    position: relative;
+    width: 15px;
+    height: 15px;
+}
+
+.Menu__button__button-elements span {
+    position: absolute;
+    left: 6px;
+
+    display: block;
+
+    width: 3px;
+    height: 3px;
+
+    background-color: white;
+    border-radius: 3px;
+
+    transition: ease all 0.2s;
+
+}
+
+
+.Menu__button__button-elements span:nth-child(1) {
+    top: 0;
+}
+
+.Menu__button__button-elements span:nth-child(2) {
+    top: 6px;
+}
+
+.Menu__button__button-elements span:nth-child(3) {
+    bottom: 0;
+}
+
+
+.Menu__button.active .Menu__button__button-elements span:nth-child(1) {
+    top: 6px;
+    left: 0;
+    width: 15px;
+    transform: rotate(45deg);
+}
+
+.Menu__button.active .Menu__button__button-elements span:nth-child(2) {
+    opacity: 0;
+}
+
+.Menu__button.active .Menu__button__button-elements span:nth-child(3) {
+    bottom: 6px;
+    left: 0;
+    width: 15px;
+    transform: rotate(-45deg);
+}
+
+
+.Menu__background-blur {
+    z-index: 98;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: ease opacity 0.2s;
+    pointer-events: none;
+}
+
+.Menu__background-blur.active {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.Menu__items {
+    position: absolute;
+    top: 76px;
+    right: 40px;
+    width: 80px;
+    background-color: #eee;
+    border-radius: 5px;
+    transition: ease opacity 0.2s;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 99;
+}
+
+.Menu__items.active {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.Menu__items__item {
+    display: block;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 12px;
+    border-bottom: 1px solid #ccc;
+
+    cursor:pointer;
+
+    transition: ease background-color 0.2s;
+}
+
+.Menu__items__item:last-child {
+    border-bottom: none;
+}
+
+.Menu__items__item:hover {
+    background-color: rgba(100,100,100,.1);
+}
