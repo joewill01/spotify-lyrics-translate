@@ -29,20 +29,32 @@
 
 .Lyrics__lyric {
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     padding-right: 70px;
     font-size: 30px;
     opacity: 0.6;
     transition: ease font-size 0.5s, opacity 0.5s, transform 0.5s;
     transform-origin: 0%;
     color: white;
-    font-weight: 700;
-    font-size: 30px;
 }
 
 .Lyrics__lyric.active {
     opacity: 1;
     transform: scale(1.1);
+}
+
+
+.Lyrics__lyric__text {
+    display: block;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.Lyrics__lyric__translated-text {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 5px;
 }
 
 .Lyrics__contribution {

@@ -147,6 +147,7 @@ function Player() {
 					onForwardClick={() => {player.nextTrack()}}
 					onBackClick={() => {player.previousTrack()}}
 				/>
+				{/*have option to enable/disable this in menu*/}
 			</div>
       </div>
     );
