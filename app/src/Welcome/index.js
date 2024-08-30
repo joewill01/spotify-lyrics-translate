@@ -6,12 +6,11 @@ import './Welcome.css';
 
 function Welcome() {
 
-  const { tokenData, token, logIn, logOut, idToken, error } = useContext(AuthContext)
-
+    const { token, logIn, error } = useContext(AuthContext)
 
     return (
-		<div className="Welcome">
-			<h1 className="Welcome__header">Welcome to Lyric<span className="Welcome__header-gradient">Translate</span></h1>
+        <div className="Welcome">
+            <h1 className="Welcome__header">Welcome to Lyric<span className="Welcome__header-gradient">Translate</span></h1>
             <span className="Welcome__spacer"></span>
             <p className="Welcome__subtext">To get started, you’ll need to link your Spotify account.</p>
             <p className="Welcome__subtext">{token?token:""}</p>
