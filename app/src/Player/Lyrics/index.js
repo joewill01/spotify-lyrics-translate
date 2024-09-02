@@ -70,7 +70,8 @@ function Lyrics(props) {
 
         let currentLyricElement = document.getElementsByClassName('Lyrics__lyric')[i];
         if (currentLyricElement) {
-			lyricsContainerRef.current.style.top = `${50-currentLyricElement.offsetTop}px`;
+            console.log(50-currentLyricElement.offsetTop)
+			lyricsContainerRef.current.style.top = `${50-currentLyricElement.offsetTop < 0 ? 50-currentLyricElement.offsetTop : 0}px`;
         }
 
     }, [props.currentPosition,])
