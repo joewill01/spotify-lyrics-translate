@@ -8,6 +8,8 @@ import SeekBar from './SeekBar';
 import TrackControls from './TrackControls';
 import Lyrics from './Lyrics';
 import Menu from './Menu';
+import DropDown from './DropDown';
+
 
 
 const track = {name: "",album: {images: [{ url: "" }]},artists: [{ name: "" }]}
@@ -127,6 +129,7 @@ function Player() {
 			/>
 
 			<Menu onLogoutClick={() => {logOut()}} />
+			<DropDown />
 
 			<div className="Player__bottom">
 				<NowPlaying
